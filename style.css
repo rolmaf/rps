@@ -1,0 +1,148 @@
+html {
+    position: fixed;
+}
+
+.title {
+    font-size: 20pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 35px;
+}
+
+.players {
+    display: flex;
+    width: 99.6vw;
+    height: 98.3vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+
+}
+
+.active {
+    border: 3px solid royalblue;
+}
+
+.bot-active {
+    border: 3px solid red;
+}
+
+.players__user,
+.players__bot {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.players__user {
+    margin-left: 40px;
+    /* padding-right: 30px;
+    border-right: 3px solid gold; */
+}
+
+.players__user {
+    margin-right: 40px;
+}
+
+.user-img {
+    animation-duration: 2s;
+    animation-name: rotate-img;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.img1 {
+    background-image: url(./stone.jpg);
+    background-color: #2f3239;
+}
+
+.img2 {
+    background-image: url(./scissors.jpg);
+}
+
+.img3 {
+    background-image: url(./paper.jpg);
+}
+
+.score-user {
+    margin-top: 83px;
+    margin-right: 20px;
+}
+
+.flex-score {
+    text-align: center;
+    height: 200px;
+    border-right: 3px solid gold;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+.score-bot {
+    margin-bottom: 3px;
+}
+
+@keyframes rotate-img {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale-img {
+    0% {
+        transform: scale(0px);
+    }
+
+    50% {
+        transform: scale(100px);
+    }
+
+    100% {
+        transform: scale(0px);
+    }
+}
+
+@media all and (max-width: 1494px) {
+    .img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        font-size: 15pt;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .title {
+        margin-right: 25px;
+    }
+
+}
+
+@media all and (max-width: 1241px) {
+    .players__user {
+        flex-direction: column;
+    }
+
+    .players__bot {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 528px) {
+    .img {
+        width: 50px;
+        height: 50px;
+    }
+}
